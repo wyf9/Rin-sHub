@@ -374,6 +374,7 @@ a.footnote {
   padding: 20px 0;
 }
 .waterfall .wrapper .item {
+  width: 100%;
   break-inside: avoid;
   margin-bottom: 15px;
   position: relative;
@@ -386,10 +387,11 @@ a.footnote {
   transition: all 0.15s;
 }
 .waterfall .wrapper .item:hover {
-  transform: translateY(-2px);
+  opacity: 0.85;
 }
 .waterfall .wrapper .item img {
   width: 100%;
+  image-rendering: auto;
   display: block;
 }
 .waterfall .wrapper .item .tags {
@@ -442,5 +444,6 @@ a.footnote {
 .waterfall .wrapper .item h3,
 .waterfall .wrapper .item p {
   margin-left: 16px;
+  margin-right: 16px;
 }
 /*# sourceMappingURL=index.css.map */

@@ -53,11 +53,19 @@ fetch('./updates/images.json') // 假设你的 JSON 文件名为 images.json
             filterItems(query);
         });
 
-        // 当用户在输入框中输入时实时触发过滤
-        searchInput.addEventListener('input', () => {
-            const query = searchInput.value.trim();
-            filterItems(query);
+        // 按回车键触发搜索
+        searchInput.addEventListener('keyup', (e) => {
+            if (event.keyCode === 13) {
+                const query = searchInput.value.trim();
+                filterItems(query);
+            }
         });
+
+        // 当用户在输入框中输入时实时触发过滤
+        // searchInput.addEventListener('input', () => {
+        //     const query = searchInput.value.trim();
+        //     filterItems(query);
+        // });
 
         // 点击标签时触发搜索该标签
         gallery.addEventListener('click', (e) => {

@@ -1,0 +1,42 @@
+// out: ../css/
+@import "base";
+@import "common_mobile";
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.filter .wrapper {
+  margin-top: 24px;
+}
+
+.waterfall .wrapper{
+  column-count: 4;
+  column-gap: 15px;
+  padding: 20px 0;
+
+  @media (max-width: 1000px) {
+    column-count: 3;
+  }
+
+  @media (max-width: 768px) {
+    column-count: 2;
+  }
+
+  @media (max-width: 480px) {
+    column-count: 1;
+  }
+
+  .item {
+    h3 {
+      font-size: 16px;
+    }
+  }
+}

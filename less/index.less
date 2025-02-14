@@ -23,6 +23,7 @@
   padding: 20px 0;
 
   .item {
+    width: 100%;
     break-inside: avoid;  // 避免内容分段！
     margin-bottom: 15px;
     position: relative;
@@ -36,11 +37,12 @@
     transition: all 0.15s;
 
     &:hover {
-      transform: translateY(-2px);
+      opacity: 0.85;
     }
 
     img {
       width: 100%;
+      image-rendering: auto;
       display: block;
     }
 
@@ -97,6 +99,7 @@
     }
     h3, p {
       margin-left: 16px;
+      margin-right: 16px;
     }
   }
 }
