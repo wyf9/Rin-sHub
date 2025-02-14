@@ -18,7 +18,7 @@ fetch('./updates/images.json') // 假设你的 JSON 文件名为 images.json
                     return `<a href="javascript:void(0)" class="tag ${colorClass}" data-tag="${tag}">${tag}</a>`;
                 }).join('');
                 div.innerHTML = `
-                    <img src="updates/images/${item.image}" alt="${item.title}">
+                    <img src="updates/images/${item.image}" alt="${item.title}" loading="lazy">  <!-- 懒加载 -->
                     <div class="tags">${tagsHtml}</div>
                     <h3>${item.title}</h3>
                     <p>${item.description}</p>

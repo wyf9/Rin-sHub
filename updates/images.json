@@ -1,28 +1,132 @@
 {
   "tags":{
     "涩涩": "yellow",
-    "test2": "red"
+    "朝鲜": "red",
+    "Meme": "purple",
+    "男娘": "purple",
+    "发电": "yellow",
+    "纯逆天": "cyan",
+    "PlayWithMe": "green",
+    "喵呜": "purple",
+    "闲鱼": "yellow",
+    "QQ": "blue",
+    "钉钉": "blue",
+    "智教联盟论坛": "green",
+    "Discord": "purple"
   },
 
   "tags_colors": [
     "red",
     "yellow",
     "green",
+    "blue",
+    "purple",
+    "cyan",
     "不要更改此处！"
   ],
 
   "hub_items": [
     {
-      "title": "Test",
-      "image": "blank.png",
-      "description": "This is a test",
-      "tags": ["test", "test2"]
+      "title": "想涩涩了喵~",
+      "image": "想涩涩了喵.png",
+      "description": "在智教发电的屑Rin",
+      "tags": ["智教联盟论坛", "喵呜", "发电", "涩涩"]
     },
     {
-      "title": "Test",
-      "image": "blank.png",
-      "description": "This is a test",
-      "tags": ["test", "dtest2"]
+      "title": "Only CW can do.",
+      "image": "OnlyCWcanDo.png",
+      "description": "只有 Class Widgets 能做到。",
+      "tags": ["QQ", "Discord", "发电", "涩涩", "套娃"]
+    },
+    {
+      "title": "喜欢做为什么不去后厨\uD83E\uDD14",
+      "image": "喜欢做为什么不去后厨\uD83E\uDD14.png",
+      "description": "我也不知道喵",
+      "tags": ["发电", "QQ"]
+    },
+    {
+      "title": "卖掉惹",
+      "image": "纯逆天/卖掉了.jpg",
+      "description": "怎么给Rin卖了",
+      "tags": ["Meme", "纯逆天", "闲鱼"]
+    },
+    {
+      "title": "是南凉",
+      "image": "纯逆天/是南凉.png",
+      "description": "就是南梁就是南梁",
+      "tags": ["纯逆天", "QQ", "男娘"]
+    },
+    {
+      "title": "喵",
+      "image": "喵/喵.png",
+      "description": "喵~",
+      "tags": ["喵呜", "QQ", "套娃"]
+    },
+    {
+      "title": "喵！",
+      "image": "喵/喵!.png",
+      "description": "喵!!",
+      "tags": ["喵呜", "QQ", "套娃"]
+    },
+    {
+      "title": "一定是RinLit干的",
+      "image": "RinLit干的/一定是RinLit干的.jpg",
+      "description": "就是你干的！",
+      "tags": ["Meme", "RinLit"]
+    },
+    {
+      "title": "RinLit又干了",
+      "image": "RinLit干的/RinLit又干了.jpg",
+      "description": "就是你干的！",
+      "tags": ["Meme", "RinLit", "QQ"]
+    },
+    {
+      "title": "RBQ",
+      "image": "QQ&钉钉/RBQ.png",
+      "description": "肉……*器（？",
+      "tags": ["涩涩", "纯逆天", "QQ"]
+    },
+    {
+      "title": "RinLit倒模，厂家直销\uD83D\uDC4D",
+      "image": "QQ&钉钉/RinLit倒模，厂家直销\uD83D\uDC4D.png",
+      "description": "这又是（？",
+      "tags": ["纯逆天", "QQ"]
+    },
+    {
+      "title": "Rin又干了",
+      "image": "QQ&钉钉/Rin又干了.png",
+      "description": "\uD83D\uDE0B\uD83D\uDE0B",
+      "tags": ["纯逆天", "QQ"]
+    },
+    {
+      "title": "课表软件一定要有一只小RinLit",
+      "image": "QQ&钉钉/一定要有.jpg",
+      "description": "三年级小萝莉在此！",
+      "tags": ["纯逆天", "朝鲜", "QQ"]
+    },
+    {
+      "title": "不一定是 1.0",
+      "image": "QQ&钉钉/不一定是 1.0.jpg",
+      "description": "含精",
+      "tags": ["纯逆天", "涩涩", "QQ", "不一定是"]
+    },
+    {
+      "title": "不一定是 2.0",
+      "image": "QQ&钉钉/不一定是 2.0.jpg",
+      "description": "燕国地图挺长",
+      "tags": ["纯逆天", "涩涩", "QQ", "不一定是"]
+    },
+    {
+      "title": "你是1吗",
+      "image": "QQ&钉钉/你是1吗.jpg",
+      "description": "我怎么不是1",
+      "tags": ["纯逆天", "涩涩", "QQ", "不一定是"]
+    },
+    {
+      "title": "先天jy圣体",
+      "image": "QQ&钉钉/先天jy圣体.png",
+      "description": "我想要🐋💦🥛",
+      "tags": ["纯逆天", "涩涩", "QQ", "不一定是"]
     }
   ]
 }
