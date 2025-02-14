@@ -396,6 +396,8 @@ a.footnote {
 .waterfall .wrapper .item .tags {
   position: absolute;
   display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
   top: 10px;
   right: 10px;
   gap: 8px;
@@ -415,6 +417,15 @@ a.footnote {
 }
 .waterfall .wrapper .item .tags .tag.red {
   background: #fde7e9;
+}
+.waterfall .wrapper .item .tags .tag.blue {
+  background: #abcff2;
+}
+.waterfall .wrapper .item .tags .tag.cyan {
+  background: #8ee3f0;
+}
+.waterfall .wrapper .item .tags .tag.purple {
+  background: #d6b4fd;
 }
 .waterfall .wrapper .item .tags .tag.green {
   background: #dff6dd;
