@@ -374,14 +374,11 @@ a.footnote {
   padding: 20px 0;
 }
 .waterfall .wrapper .item {
-  min-height: 100px;
-  /* 适当调整 */
   width: 100%;
   break-inside: avoid;
   margin-bottom: 15px;
   position: relative;
   display: block;
-  overflow: hidden;
   background: rgba(255, 255, 255, 0.85);
   border-radius: 8px;
   box-shadow: 0 12px 22px rgba(0, 0, 0, 0.23);
