@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="zh">
+<head>
+    <script src="./js/public_style.js"></script>  <!-- 公共样式 -->
+    <script src="./js/load_waterfall.js"></script>  <!-- 自动加载配置 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="./assets/icon/FluentSystemIcons-Resizable.css">
+    <title>RinLit 的 Hub</title>
+</head>
+<body>
+    <!-- Header -->
+    <div id="header"></div> <!-- 用公共样式引入 -->
+
+    <!-- Filter -->
+    <div class="filter">
+        <div class="wrapper">
+            <div class="search">
+                <input type="text" placeholder="查查 RinLit 的 Hub" id="searchInput">
+                <button class="pushButton tool" id="searchButton">
+                    <i class="icon-ic_fluent_search_20_filled"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- WaterFall -->
+    <div class="waterfall">
+        <div class="wrapper" id="gallery">
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div id="footer"></div> <!-- 用公共样式引入 -->
+</body>
+</html>

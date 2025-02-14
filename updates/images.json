@@ -1,0 +1,28 @@
+{
+  "tags":{
+    "涩涩": "yellow",
+    "test2": "red"
+  },
+
+  "tags_colors": [
+    "red",
+    "yellow",
+    "green",
+    "不要更改此处！"
+  ],
+
+  "hub_items": [
+    {
+      "title": "Test",
+      "image": "blank.png",
+      "description": "This is a test",
+      "tags": ["test", "test2"]
+    },
+    {
+      "title": "Test",
+      "image": "blank.png",
+      "description": "This is a test",
+      "tags": ["test", "dtest2"]
+    }
+  ]
+}
