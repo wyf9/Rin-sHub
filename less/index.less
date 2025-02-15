@@ -13,6 +13,17 @@
   }
 }
 
+@keyframes fade-in-top {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .filter .wrapper {
   position: fixed;
   top: 64px;
@@ -47,6 +58,14 @@
     &:hover {
       transform: translateY(-3px);
       box-shadow: 0 28px 50px rgba(0, 0, 0, 0.45);
+    }
+
+    &.visible-in-bottom {
+      animation: fade-in 0.4s forwards;
+    }
+
+    &.visible-in-top {
+      animation: fade-in-top 0.4s forwards;
     }
 
     img {

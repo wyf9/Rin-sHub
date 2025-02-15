@@ -178,6 +178,12 @@ a.link.float:hover::before {
   -webkit-user-drag: none;
   user-drag: none;
 }
+.pushButton:hover {
+  opacity: 0.85;
+}
+.pushButton:active {
+  opacity: 0.7;
+}
 .pushButton.tool {
   padding: 0 8px;
 }
@@ -366,6 +372,16 @@ a.footnote {
     transform: translateY(0);
   }
 }
+@keyframes fade-in-top {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .filter .wrapper {
   position: fixed;
   top: 64px;
@@ -397,6 +413,12 @@ a.footnote {
 .waterfall .wrapper .item:hover {
   transform: translateY(-3px);
   box-shadow: 0 28px 50px rgba(0, 0, 0, 0.45);
+}
+.waterfall .wrapper .item.visible-in-bottom {
+  animation: fade-in 0.4s forwards;
+}
+.waterfall .wrapper .item.visible-in-top {
+  animation: fade-in-top 0.4s forwards;
 }
 .waterfall .wrapper .item img {
   min-height: 125px;

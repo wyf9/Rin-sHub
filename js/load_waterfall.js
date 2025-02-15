@@ -1,9 +1,74 @@
 // search func by chatgpt
 
+// 出现动画
+function appearAnimation(selector = '.item', delay = 500) {
+    console.log('Selector:', selector);
+
+    function init() {
+        const elements = document.querySelectorAll(selector);
+
+        if (elements.length === 0) {
+            console.error(`No elements found for selector: ${selector}`);
+            return;
+        } else {
+            console.log(`Found ${elements.length} elements.`);
+        }
+
+        elements.forEach(element => {
+            element.style.opacity = '0';
+        });
+
+        setTimeout(() => { // 延迟启动 observer，等瀑布流布局完成
+            const observerOptions = {
+                root: null, // 视口为根
+                threshold: 0.1 // 元素进入视口的 10% 时触发
+            };
+
+            const observerCallback = (entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const rect = entry.boundingClientRect;
+                        const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+
+                        if (rect.top > viewportHeight / 2) {
+                            // 从下方进入
+                            entry.target.classList.add('visible-in-bottom');
+                        } else if (rect.bottom <= viewportHeight && rect.top >= 0) {
+                            // 如果元素最初就在视口内，确保它只应用 visible-in-bottom
+                            entry.target.classList.add('visible-in-bottom');
+                        } else {
+                            // 从上方进入
+                            entry.target.classList.add('visible-in-top');
+                        }
+
+                    } else {
+                        // 元素离开视口时移除动画
+                        entry.target.classList.remove('visible-in-top', 'visible-in-bottom');
+                    }
+                });
+            };
+
+            const observer = new IntersectionObserver(observerCallback, observerOptions);
+            elements.forEach(element => observer.observe(element));
+        }, delay); // 延迟执行 IntersectionObserver
+    }
+
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", init);
+    } else {
+        init();
+    }
+}
+
+
+
 fetch('./updates/images.json') // 假设你的 JSON 文件名为 images.json
     .then(response => response.json())
     .then(data => {
+
+        // 定义全局变量
         const gallery = document.getElementById('gallery');
+        const clearButton = document.getElementById('clearButton');
         const items = data.hub_items;
         const tagColors = data.tags;
 
@@ -25,6 +90,8 @@ fetch('./updates/images.json') // 假设你的 JSON 文件名为 images.json
                 `;
                 gallery.appendChild(div);
             });
+            appearAnimation(); // 出现动画
+            window.scrollTo(0, 0);  // 回到顶部
         }
 
         // 初次展示所有项目
@@ -61,6 +128,12 @@ fetch('./updates/images.json') // 假设你的 JSON 文件名为 images.json
             }
         });
 
+        // 当用户点击清除按钮时触发过滤
+        clearButton.addEventListener('click', () => {
+            searchInput.value = '';  // 清空搜索框
+            displayItems(Object.values(items));  // 显示所有项目
+        });
+
         // 当用户在输入框中输入时实时触发过滤
         // searchInput.addEventListener('input', () => {
         //     const query = searchInput.value.trim();
@@ -75,5 +148,6 @@ fetch('./updates/images.json') // 假设你的 JSON 文件名为 images.json
                 filterItems(tag);         // 触发过滤
             }
         });
+
     })
     .catch(error => console.error('Error loading JSON:', error));
