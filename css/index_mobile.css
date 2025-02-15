@@ -199,7 +199,6 @@ header .right img {
 .waterfall .wrapper {
   column-count: 4;
   column-gap: 15px;
-  padding: 20px 0;
 }
 @media (max-width: 1200px) {
   .waterfall .wrapper {

@@ -21,7 +21,7 @@ function appearAnimation(selector = '.item', delay = 500) {
         setTimeout(() => { // 延迟启动 observer，等瀑布流布局完成
             const observerOptions = {
                 root: null, // 视口为根
-                threshold: 0.1 // 元素进入视口的 10% 时触发
+                threshold: 0.05 // 元素进入视口的 10% 时触发
             };
 
             const observerCallback = (entries, observer) => {
