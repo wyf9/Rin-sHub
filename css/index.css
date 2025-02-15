@@ -367,12 +367,19 @@ a.footnote {
   }
 }
 .filter .wrapper {
-  margin-top: 24px;
+  position: fixed;
+  top: 64px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  margin-top: 18px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 6px 24px 0 rgba(0, 0, 0, 0.3);
 }
 .waterfall .wrapper {
   column-count: 4;
   column-gap: 15px;
-  padding: 20px 0;
+  padding: 72px 0;
 }
 .waterfall .wrapper .item {
   width: 100%;
@@ -388,7 +395,8 @@ a.footnote {
   transition: all 0.15s;
 }
 .waterfall .wrapper .item:hover {
-  opacity: 0.85;
+  transform: translateY(-3px);
+  box-shadow: 0 28px 50px rgba(0, 0, 0, 0.45);
 }
 .waterfall .wrapper .item img {
   width: 100%;
@@ -440,6 +448,7 @@ a.footnote {
   margin-top: 12px;
 }
 .waterfall .wrapper .item p {
+  white-space: pre-line;
   margin-bottom: 12px;
 }
 .waterfall .wrapper .item h3,
