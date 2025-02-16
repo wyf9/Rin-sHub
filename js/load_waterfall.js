@@ -93,15 +93,17 @@ fetch('./updates/images.json') // 假设你的 JSON 文件名为 images.json
         `;
 
                 // 绑定点击事件
-                div.addEventListener('click', () => {
-                    // 延迟加载图片，提高性能
-                    setTimeout(() => {
-                        const imageViewer = document.getElementById('image-viewer');
-                        const viewerImg = imageViewer.querySelector('img');
+                div.addEventListener('click', (e) => {
+                    if (!e.target.classList.contains('tag')) { // 如果点击的不是标签
+                        // 延迟加载图片，提高性能
+                        setTimeout(() => {
+                            const imageViewer = document.getElementById('image-viewer');
+                            const viewerImg = imageViewer.querySelector('img');
 
-                        viewerImg.src = `updates/images/${item.image}`;
-                        imageViewer.classList.add('active');
-                    }, 300);
+                            viewerImg.src = `updates/images/${item.image}`;
+                            imageViewer.classList.add('active');
+                        }, 300);
+                    }
                 });
 
                 gallery.appendChild(div);
