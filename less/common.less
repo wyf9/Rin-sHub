@@ -394,10 +394,13 @@ a {
 
 // 图片查看器 //
 .image-viewer {
-  display: none;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
 
   &.active {
-    display: block;
+    visibility: visible;
+    opacity: 1;
   }
 
   position: fixed;
@@ -415,8 +418,12 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
+
     img {
+      -webkit-user-select: none;
+      user-select:none;
       position: absolute;
+      -webkit-user-drag: none;
       user-drag: none;
       cursor: grab;
       -webkit-user-drag: none;

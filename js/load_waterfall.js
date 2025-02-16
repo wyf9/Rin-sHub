@@ -98,7 +98,6 @@ fetch('./updates/images.json') // 假设你的 JSON 文件名为 images.json
                     setTimeout(() => {
                         const imageViewer = document.getElementById('image-viewer');
                         const viewerImg = imageViewer.querySelector('img');
-                        console.log(viewerImg, imageViewer);
 
                         viewerImg.src = `updates/images/${item.image}`;
                         imageViewer.classList.add('active');

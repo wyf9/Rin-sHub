@@ -451,7 +451,9 @@ a.footnote {
   z-index: 1;
 }
 .image-viewer {
-  display: none;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
   position: fixed;
   top: 0;
   left: 0;
@@ -462,7 +464,8 @@ a.footnote {
   z-index: 500;
 }
 .image-viewer.active {
-  display: block;
+  visibility: visible;
+  opacity: 1;
 }
 .image-viewer .container {
   height: 100%;
@@ -472,6 +475,8 @@ a.footnote {
   justify-content: center;
 }
 .image-viewer .container img {
+  -webkit-user-select: none;
+  user-select: none;
   position: absolute;
   user-drag: none;
   cursor: grab;
@@ -537,7 +542,10 @@ a.footnote {
   animation: fade-in-top 0.4s forwards;
 }
 .waterfall .wrapper .item img {
+  -webkit-user-select: none;
+  user-select: none;
   min-height: 125px;
+  max-height: 800px;
   object-fit: cover;
   width: 100%;
   image-rendering: auto;
