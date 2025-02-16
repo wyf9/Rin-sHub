@@ -195,7 +195,7 @@ Copyright © 2025 RinLit, All rights reserved.
             </td>
             <td align="center">
                 <a href="#">
-                    <img src="https://q2.qlogo.cn/headimg_dl?dst_uin=2，2，3-三甲基戊烷&spec=100" width="100;" alt="2，2，3-三甲基戊烷"/>
+                    <img src="https://q2.qlogo.cn/headimg_dl?dst_uin=3530309889&spec=100" width="100;" alt="2，2，3-三甲基戊烷"/>
                     <br />
                     <sub><b>2，2，3-三甲基戊烷</b></sub>
                 </a>
@@ -218,7 +218,7 @@ Copyright © 2025 RinLit, All rights reserved.
 		<tr>
             <td align="center">
                 <a href="#">
-                    <img src="https://q2.qlogo.cn/headimg_dl?dst_uin=quiet-star-gazing&spec=100" width="100;" alt="quiet-star-gazing"/>
+                    <img src="https://q2.qlogo.cn/headimg_dl?dst_uin=531854969&spec=100" width="100;" alt="quiet-star-gazing"/>
                     <br />
                     <sub><b>quiet-star-gazing</b></sub>
                 </a>
