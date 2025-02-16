@@ -78,21 +78,40 @@ fetch('./updates/images.json') // 假设你的 JSON 文件名为 images.json
             itemsToDisplay.forEach(item => {
                 const div = document.createElement('div');
                 div.classList.add('item');
+                div.dataset.image = item.image; // 存储图片路径，方便后续使用
+
                 const tagsHtml = item.tags.map(tag => {
                     const colorClass = tagColors[tag] || 'default';
                     return `<a href="javascript:void(0)" class="tag ${colorClass}" data-tag="${tag}">${tag}</a>`;
                 }).join('');
+
                 div.innerHTML = `
-                    <img src="updates/images/${item.image}" alt="${item.title}" loading="lazy">  <!-- 懒加载 -->
-                    <div class="tags">${tagsHtml}</div>
-                    <h3>${item.title}</h3>
-                    <p>${item.description}</p>
-                `;
+            <img src="updates/images/${item.image}" alt="${item.title}" loading="lazy">  <!-- 懒加载 -->
+            <div class="tags">${tagsHtml}</div>
+            <h3>${item.title}</h3>
+            <p>${item.description}</p>
+        `;
+
+                // 绑定点击事件
+                div.addEventListener('click', () => {
+                    // 延迟加载图片，提高性能
+                    setTimeout(() => {
+                        const imageViewer = document.getElementById('image-viewer');
+                        const viewerImg = imageViewer.querySelector('img');
+                        console.log(viewerImg, imageViewer);
+
+                        viewerImg.src = `updates/images/${item.image}`;
+                        imageViewer.classList.add('active');
+                    }, 300);
+                });
+
                 gallery.appendChild(div);
             });
+
             appearAnimation(); // 出现动画
             window.scrollTo(0, 0);  // 回到顶部
         }
+
 
         // 初次展示所有项目
         displayItems(Object.values(items));

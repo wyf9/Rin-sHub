@@ -68,6 +68,7 @@ button:active {
 }
 input[type="text"] {
   flex: 1;
+  min-height: 0;
   padding: 7px 15px;
   outline: none;
   background-color: rgba(255, 255, 255, 0.8);
@@ -86,9 +87,11 @@ input[type="text"]:focus {
 }
 .range-container {
   position: relative;
+  -webkit-user-drag: none;
+  margin: 0 8px;
   width: 300px;
   height: 4px;
-  background: #005fb8;
+  background: rgba(0, 0, 0, 0.44);
   border-radius: 3px;
 }
 .range-container::before {
@@ -97,23 +100,18 @@ input[type="text"]:focus {
   height: 4px;
   background: #005fb8;
   border-radius: 3px;
-  width: 50%;
+  width: var(--progress-width, 50%);
 }
 input[type='range'] {
+  position: absolute;
+  top: 0;
+  left: 0;
   -webkit-appearance: none;
-  width: 200px;
-  height: 20px;
+  width: 100%;
+  height: 100%;
   outline: none;
   /* 避免點選會有藍線或虛線 */
-  background: none;
-  overflow: hidden;
-}
-input[type='range']::-webkit-slider-runnable-track {
-  width: 100%;
-  height: 4px;
-  background: rgba(0, 0, 0, 0.44);
-  border-radius: 3px;
-  border: none;
+  background: transparent;
 }
 input[type='range']::-webkit-slider-thumb {
   -webkit-appearance: none;
@@ -121,11 +119,10 @@ input[type='range']::-webkit-slider-thumb {
   /* 設為相對位置，為了前後區塊的絕對位置而設定 */
   width: 20px;
   height: 20px;
-  margin-top: -8px;
   background: #005fb8;
   border: 4px solid #fff;
   border-radius: 50%;
-  transition: 0.1s;
+  transition: all 0.1s;
 }
 input[type='range']::-webkit-slider-thumb:before {
   content: "";
@@ -461,7 +458,7 @@ a.footnote {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.3);
-  backdrop-filter: blur(1px);
+  backdrop-filter: blur(30px);
   z-index: 500;
 }
 .image-viewer.active {
@@ -470,14 +467,15 @@ a.footnote {
 .image-viewer .container {
   height: 100%;
   padding: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .image-viewer .container img {
   position: absolute;
   user-drag: none;
+  cursor: grab;
   -webkit-user-drag: none;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 @keyframes fade-in {
   from {

@@ -3,6 +3,8 @@
 <head>
     <script src="./js/public_style.js"></script>  <!-- 公共样式 -->
     <script src="./js/load_waterfall.js"></script>  <!-- 自动加载配置 -->
+    <script src="./js/controls.js"></script>  <!-- 控件 -->
+    <script src="./js/index.js"></script>  <!-- 主程序 -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -34,6 +36,24 @@
     <!-- WaterFall -->
     <div class="waterfall">
         <div class="wrapper" id="gallery">
+        </div>
+    </div>
+
+    <!-- Img Viewer -->
+    <div class="image-viewer" id="image-viewer">
+        <div class="container">
+            <img id="viewer-image" src="updates/images/blank.png" alt="114514">
+
+            <div class="toolbar">
+                <div class="range-container"> <!-- 滑动条 -->
+                    <input type="range" min="10" max="250" value="100"
+                           id="scale-range" data-target="scale-text">  <!-- 数据指向scale-text -->
+                </div>
+                <span id="scale-text">100%</span>
+                <button class="pushButton transparent tool" id="closeButton">
+                    <i class="icon-ic_fluent_dismiss_20_filled"></i>
+                </button>
+            </div>
         </div>
     </div>
 

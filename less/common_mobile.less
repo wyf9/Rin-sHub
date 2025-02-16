@@ -5,7 +5,13 @@
 }
 
 // var
-@theme-color: #0078d4;
+@theme-color: #005fb8;
+@main-color: #fff;
+@background: rgba(255, 255, 255, 0.8);
+@background-secondary: #ecedef;
+@background-hover: rgba(255, 255, 255, 0.9);
+@background-focus: rgb(255, 255, 255);
+@border: rgba(0, 0, 0, 0.06);
 
 @keyframes up-in {
   0% {
@@ -18,12 +24,7 @@
   }
 }
 
-input {
-  outline: none;  // 去掉表单控件焦点框
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 5px;
-  border: 1px solid rgba(0, 0, 0, 0.06);
-  border-bottom: 1px solid #8a8a8a;
+input[type="text"] {
   padding: 7px 18px;
   font-size: 16px;
 }
@@ -139,4 +140,8 @@ header {
       font-size: 2.5em;
     }
   }
+}
+
+.range-container {
+  width: 100px;
 }
