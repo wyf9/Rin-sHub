@@ -28,7 +28,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const r18alert = document.querySelector("#r18_alert");
 
     if (localStorage.getItem("ageVerified") !== "true") {
+        console.log("满足条件")
         r18alert.classList.remove("active")
+    } else {
+        console.log("不满足条件")
+        r18alert.classList.add("active")
     }
 
 
