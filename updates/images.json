@@ -18,6 +18,7 @@
     "智教联盟论坛": "green",
     "Discord": "purple",
     "我喜欢你": "green"
+    "梗图": "yellow"
   },
 
   "tags_colors": [
@@ -499,9 +500,15 @@
     },
     {
       "title": "日rinlit😋",
-      "image": "Discord/QQ20250215-211210.png",
+      "image": "Discord/QQ20250218-225631.png",
       "description": "爱日😋",
       "tags": ["纯逆天", "涩涩", "Discord"]
+    },
+    {
+      "title": "神秘的三角贸易链",
+      "image": "61e762769717964b4d298fe28ec0dc8b1415904543.jpg",
+      "description": "太神秘了",
+      "tags": ["梗图", "Meme"]
     }
   ]
 }
