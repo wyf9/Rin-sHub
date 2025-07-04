@@ -23,6 +23,11 @@
 > [!TIP]
 > 
 > 在线预览：[Rin's Hub](https://hub.rinlit.cn)
+>
+> 
+>
+>好消息！本网站内容已被Bing收录
+![img.png](docs/1985e98a2b3fbc84.png)
 
 > [!Warning]
 >
