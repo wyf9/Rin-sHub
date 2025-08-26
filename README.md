@@ -20,6 +20,12 @@
 
 当然，这个项目你也可以用哦如果你也希望拥有的话。
 
+> [!Warning]
+> 由于RinLit对原Rin's Hub仓库进行了private处理,现所有者为 [furinafirefly](https://github.com/furinafirefly)                                                        
+> 保留原所有者的LICENSE与版权声明.                                              
+> 任何投稿请向新所有者提交.
+> 
+
 > [!TIP]
 > 
 > 在线预览：[Rin's Hub](https://hub.rinlit.cn)
